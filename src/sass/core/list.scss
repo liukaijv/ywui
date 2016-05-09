@@ -1,0 +1,85 @@
+.#{$ns}list {
+  background-color: $listBgPrimary;
+  & > li {
+    position: relative;
+    @include flexbox();
+    border-bottom: 1px solid $borderColorPrimary;
+    line-height: $listContentHeight;
+    padding: $gapSize $gapSize $gapSize 0;
+    margin-left: $gapSize;
+    margin-top: -1px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &.list-link {
+      cursor: pointer;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        margin-top: -5px;
+        @include caret($borderColorPrimary, 10px, 2px, 45deg);
+      }
+      .list-inner {
+        padding-right: 22px;
+      }
+    }
+    &.list-toggle {
+      cursor: pointer;
+      margin-left: 0;
+      padding-left: $gapSize;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        margin-top: -8px;
+        @include caret($borderColorPrimary, 10px, 2px, 135deg);
+      }
+      &.active {
+        &:after {
+          right: 14px;
+          top: 50%;
+          margin-top: -2px;
+          @include caret($borderColorPrimary, 10px, 2px, -45deg);
+        }
+      }
+      .list-inner {
+        padding-right: 30px;
+      }
+    }
+    &.list-header {
+      background: $bgColorDefault;
+      color: #666;
+      border-bottom: 1px solid transparent;
+      padding: $gapSize $gapSize $gapSize - 5;
+      margin-left: 0;
+    }
+    &.list-footer {
+      border-top: 1px solid lighten($borderColorPrimary, 5%);
+    }
+    .list-inner {
+      @include flexbox();
+      @include flex();
+      padding: $gapSize;
+      margin: -$gapSize;
+    }
+    .list-content {
+      @include flex();
+    }
+    .#{$ns}input {
+      border: none;
+      width: 100%;
+      display: block;
+      height: $listContentHeight;
+      line-height: $listContentHeight;
+      padding: 0 5px 0 10px;
+      text-transform: uppercase;
+      min-height: 0;
+    }
+  }
+}

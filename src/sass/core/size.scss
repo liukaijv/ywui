@@ -1,0 +1,90 @@
+// font size
+.f12 {
+  font-size: 12px;
+}
+
+.f14 {
+  font-size: 14px;
+}
+
+.f16 {
+  font-size: 16px;
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.f20 {
+  font-size: 20px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.f28 {
+  font-size: 28px;
+}
+
+.f32 {
+  font-size: 32px;
+}
+
+.f36 {
+  font-size: 36px;
+}
+
+.f40 {
+  font-size: 40px;
+}
+
+// margin
+.m {
+  margin: $gapSize;
+}
+
+.m-t {
+  margin-top: $gapSize;
+}
+
+.m-r {
+  margin-right: $gapSize;
+}
+
+.m-b {
+  margin-bottom: $gapSize;
+}
+
+.m-l {
+  margin-left: $gapSize;
+}
+
+.m-lg {
+  margin: $gapSizeLg;
+}
+
+.m-sm {
+  margin: $gapSizeSm
+}
+
+// padding
+.p {
+  padding: $gapSize;
+}
+
+.p-t {
+  padding-top: $gapSize;
+}
+
+.p-r {
+  padding-right: $gapSize;
+}
+
+.p-b {
+  padding-bottom: $gapSize;
+}
+
+.p-l {
+  padding-left: $gapSize;
+}

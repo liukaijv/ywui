@@ -1,0 +1,37 @@
+// text color classes
+.text-primary {
+  color: $colorPrimary;
+}
+
+.text-secondary {
+  color: $colorSecondary;
+}
+
+.text-white {
+  color: $colorWhite;
+}
+
+.text-black {
+  color: $colorBlack;
+}
+
+.text-gray {
+  color: $colorGray;
+}
+
+// background color classes
+.bg-white {
+  background-color: $colorWhite;
+}
+
+.bg-default {
+  background-color: $bgColorDefault;
+}
+
+.bg-primary {
+  background: $bgColorPrimary;
+}
+
+.bg-secondary {
+  background: $bgColorSecondary;
+}

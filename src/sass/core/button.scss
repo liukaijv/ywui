@@ -1,0 +1,76 @@
+.btn {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
+  font-size: $btnFontSize;
+  line-height: strip-units($btnHeight) / strip-units($btnFontSize);
+  border: 1px solid $btnBorderColor;
+  border-radius: $btnBorderRadius;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  color: $colorPrimary;
+  &.lg {
+    font-size: $btnFontSizeLg;
+    line-height: strip-units($btnHeightLg) / strip-units($btnFontSizeLg);
+  }
+  &.sm {
+    font-size: $btnFontSizeSm;
+    line-height: strip-units($btnHeightSm) / strip-units($btnFontSizeSm);
+  }
+  &.btn-fill {
+    color: #fff;
+  }
+  &.disabled,
+  &:disabled {
+    background: $borderColorPrimary !important;
+    color: #999;
+    border: 1px solid $borderColorPrimary;
+    opacity: .8;
+  }
+  &.squared {
+    border-radius: 0 !important;
+  }
+  &.btn-inline {
+    width: auto;
+    display: inline-block !important;
+  }
+}
+
+button, input {
+  &.btn {
+    width: 100%;
+    outline: none;
+    @include appearance();
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@mixin btn-create($name,$borderColor,$bgColor:$borderColor,$color:$borderColor) {
+  .#{$name} {
+    border-color: $borderColor;
+    color: $color;
+    background-color: transparent;
+    &.btn-fill {
+      background-color: $bgColor;
+      &:hover,
+      &:active {
+        background-color: darken($bgColor, 3%);
+      }
+    }
+  }
+}
+
+@include btn-create('btn-default', $borderColorPrimary, #fff, $colorDefault);
+@include btn-create('btn-primary', $colorPrimary);
+@include btn-create('btn-Secondary', $colorSecondary);
+
+.btn-group {
+  margin: $gapSize 0;
+  @include table-row($gapSize 0);
+}

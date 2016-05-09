@@ -1,0 +1,52 @@
+// base
+$ns: yc-;
+$baseFontSize: 14px;
+$baseLineHeight: 1.6;
+$baseFontFamily: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+
+$imgUrl: "../images/";
+
+// colors
+$colorDefault: #333;
+$colorPrimary: #ff9800;
+$colorSecondary: #fea356;
+
+$colorBlack: #000;
+$colorWhite: #fff;
+$colorGray: #878787;
+
+$colorLink: $colorDefault;
+$colorLinkActive: $colorLink;
+
+// background colors
+$bgColorDefault: #fff;
+$bgColorPrimary: $bgColorDefault;
+$bgColorSecondary: $bgColorDefault;
+
+// border
+$borderColorPrimary: #e0e0e0;
+$borderColorSecondary: #e7e7e7;
+$borderRadius: 2px;
+
+// base gap size
+$gapSize: 15px;
+$gapSizeLg: 20px;
+$gapSizeSm: 20px;
+
+// button
+$btnHeight: 34px;
+$btnHeightLg: 42px;
+$btnHeightSm: 26px;
+$btnFontSize: 14px;
+$btnFontSizeLg: 18px;
+$btnFontSizeSm: 12px;
+
+$btnBorderColor: $borderColorPrimary;
+$btnBorderRadius: $borderRadius;
+
+$btnPrimaryBgColor: #4ac9f7;
+$btnSecondaryBgColor: #fea356;
+
+// list
+$listBgPrimary: #fff;
+$listContentHeight: 24px;

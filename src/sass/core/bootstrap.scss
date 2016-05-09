@@ -1,0 +1,12 @@
+body {
+  font: #{$baseFontSize}/#{$baseLineHeight} $baseFontFamily;
+  color: $colorDefault;
+}
+
+a {
+  text-decoration: none;
+  color: $colorLink;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
