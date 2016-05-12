@@ -1,7 +1,7 @@
 // base
 $ns: yc-;
 $baseFontSize: 14px;
-$baseLineHeight: 1.6;
+$baseLineHeight: 20px;
 $baseFontFamily: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 
 $imgUrl: "../images/";
@@ -22,6 +22,7 @@ $colorLinkActive: $colorLink;
 $bgColorDefault: #fff;
 $bgColorPrimary: $bgColorDefault;
 $bgColorSecondary: $bgColorDefault;
+$bgColorActive: #fafafa;
 
 // border
 $borderColorPrimary: #e0e0e0;
@@ -49,4 +50,5 @@ $btnSecondaryBgColor: #fea356;
 
 // list
 $listBgPrimary: #fff;
-$listContentHeight: 24px;
+$listHeaderBg: #f9f9f9;
+$listContentHeight: $baseLineHeight;

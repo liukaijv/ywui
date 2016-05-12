@@ -1,19 +1,26 @@
 .#{$ns}list {
   background-color: $listBgPrimary;
+  border-radius: $borderRadius;
+
+  & > .#{$ns}list-item,
   & > li {
-    position: relative;
     @include flexbox();
+    position: relative;
     border-bottom: 1px solid $borderColorPrimary;
     line-height: $listContentHeight;
     padding: $gapSize $gapSize $gapSize 0;
     margin-left: $gapSize;
     margin-top: -1px;
+
     &:first-child {
       margin-top: 0;
+      border-radius: $borderRadius $borderRadius 0 0;
     }
     &:last-child {
       border-bottom: none;
+      border-radius: 0 0 $borderRadius $borderRadius;
     }
+
     &.list-link {
       cursor: pointer;
       &:after {
@@ -26,42 +33,26 @@
       }
       .list-inner {
         padding-right: 22px;
-      }
-    }
-    &.list-toggle {
-      cursor: pointer;
-      margin-left: 0;
-      padding-left: $gapSize;
-      &:after {
-        content: "";
-        position: absolute;
-        right: 14px;
-        top: 50%;
-        margin-top: -8px;
-        @include caret($borderColorPrimary, 10px, 2px, 135deg);
-      }
-      &.active {
-        &:after {
-          right: 14px;
-          top: 50%;
-          margin-top: -2px;
-          @include caret($borderColorPrimary, 10px, 2px, -45deg);
+        &:hover,
+        &:active {
+          //background-color: $bgColorActive;
         }
       }
-      .list-inner {
-        padding-right: 30px;
-      }
     }
+
     &.list-header {
-      background: $bgColorDefault;
+      background-color: $listHeaderBg;
       color: #666;
-      border-bottom: 1px solid transparent;
-      padding: $gapSize $gapSize $gapSize - 5;
+      padding: $gapSize $gapSize $gapSize - 4;
       margin-left: 0;
     }
+    & + .list-header,
     &.list-footer {
-      border-top: 1px solid lighten($borderColorPrimary, 5%);
+      border-top: 1px solid $borderColorPrimary;
+      margin-left: 0;
+      padding: $gapSize;
     }
+
     .list-inner {
       @include flexbox();
       @include flex();
@@ -71,14 +62,17 @@
     .list-content {
       @include flex();
     }
+
+    label + .list-content {
+      margin-left: 5px;
+    }
+
     .#{$ns}input {
       border: none;
       width: 100%;
       display: block;
-      height: $listContentHeight;
       line-height: $listContentHeight;
-      padding: 0 5px 0 10px;
-      text-transform: uppercase;
+      padding: 0;
       min-height: 0;
     }
   }

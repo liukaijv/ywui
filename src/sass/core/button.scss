@@ -12,7 +12,7 @@
   padding-left: 15px;
   padding-right: 15px;
   cursor: pointer;
-  color: $colorPrimary;
+  color: $colorDefault;
   &.lg {
     font-size: $btnFontSizeLg;
     line-height: strip-units($btnHeightLg) / strip-units($btnFontSizeLg);
@@ -30,6 +30,10 @@
     color: #999;
     border: 1px solid $borderColorPrimary;
     opacity: .8;
+  }
+  &:hover,
+  &:active {
+    background-color: #f9f9f9;
   }
   &.squared {
     border-radius: 0 !important;
@@ -55,7 +59,6 @@ button, input {
   .#{$name} {
     border-color: $borderColor;
     color: $color;
-    background-color: transparent;
     &.btn-fill {
       background-color: $bgColor;
       &:hover,
@@ -66,11 +69,25 @@ button, input {
   }
 }
 
-@include btn-create('btn-default', $borderColorPrimary, #fff, $colorDefault);
-@include btn-create('btn-primary', $colorPrimary);
-@include btn-create('btn-Secondary', $colorSecondary);
-
-.btn-group {
+.btn-row {
   margin: $gapSize 0;
   @include table-row($gapSize 0);
 }
+
+.btn-group {
+  .btn {
+    border-radius: 0;
+    &:first-child {
+      border-radius: $btnBorderRadius $btnBorderRadius 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 $btnBorderRadius $btnBorderRadius;
+    }
+  }
+}
+
+@include btn-create('btn-default', $borderColorPrimary, #fff, $colorDefault);
+@include btn-create('btn-primary', $colorPrimary);
+@include btn-create('btn-secondary', $colorSecondary);
+@include btn-create('btn-info', #5bc0de);
+@include btn-create('btn-danger', #d9534f);
