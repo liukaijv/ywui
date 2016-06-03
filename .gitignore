@@ -1,7 +1,8 @@
+.idea
 .sass-cache
 node_modules
 css
 js
 dist
 html.zip
-.idea
+.idea/**
